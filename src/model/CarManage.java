@@ -1,19 +1,19 @@
 package model;
 
-import java.io.BufferedReader;
 import java.io.DataInputStream;
 import java.io.FileOutputStream;
 import java.io.DataOutputStream;
-import java.io.FileReader;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class CarManage {
-    public int tempId = 1;
+    public int tempId;
     private DataOutputStream dos;
     private DataInputStream dis;
+    public CarManage() throws NumberFormatException, IOException{
+        tempId = Integer.parseInt(this.readString("src/sources/Vehicle_sequence.ddr"));
+    }
 
     public String createFile() throws IOException {
         String result = "";
