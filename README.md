@@ -1,0 +1,1 @@
+Para el primer punto se usará un archivo con terminación ".txt", este va estar ubicado en la carpeta sources del proyecto, se le dejará una ruta relativa. El documento se llamará "TextWithSpace".
