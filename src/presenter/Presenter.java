@@ -12,12 +12,13 @@ public  class Presenter{
         view = new View();
         spaceless = new WithoutSpace();
     }
-   public void showSpaceless(String fileName) throws FileNotFoundException{
-        spaceless.readFile(view.readString("Ïngrese el nombre del archivo"));
+   public void showSpaceless() throws FileNotFoundException{
+        spaceless.readFile(view.readString("Ïngrese el nombre del archivo") );
+        view.showMessage(spaceless.showSpaceless());
    }
     
     public static void main(String[] args) throws FileNotFoundException {
         Presenter presenter = new Presenter();
-        presenter.showSpaceless(null);
+        presenter.showSpaceless();
     }
 }

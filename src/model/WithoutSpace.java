@@ -60,8 +60,8 @@ public class WithoutSpace{
 			} catch (Exception e2) {}
 		}	
 	}
-    public void showSpaceless(){
+    public String showSpaceless(){
         text = text.replace(" ", "");
-        System.out.println(text);
+        return text;
     }
 }
