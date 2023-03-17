@@ -39,9 +39,9 @@ public class Presenter {
 
     private void createCar() throws IOException {
         carManage.createCar(view.readString("Ïngrese la marca del carro"),
-                view.readString("Ingrese el modelo del carro"), "Ingrese el año del carro",
-                view.readString("Ingrese el año dfel carro"), view.readString("Ingrese el color del carro"),
-                carManage.readString("/src/sourdes/Vehicle_sequence.ddr"));
+                view.readString("Ingrese el modelo del carro"),  view.readString("Ingrese la matricula del carro"),
+                view.readString("Ingrese el año del carro"), view.readString("Ingrese el color del carro"),
+                carManage.readString("src/sources/Vehicle_sequence.ddr"));
     }
 
     private void showAllCars() throws IOException {
@@ -50,7 +50,7 @@ public class Presenter {
 
     private void showACar(int carID) {
         int tempId = carID;
-        String carInfo = "/src/sources/vehicle" + tempId + ".veh";
+        String carInfo = "src/sources/vehicle" + tempId + ".veh";
         carManage.showACar(carID, carInfo);
     }
 
