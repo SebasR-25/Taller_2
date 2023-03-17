@@ -7,6 +7,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class WithoutSpace{
+    public String  text ="";
 
     public void createFile() throws IOException {
 		 try {
@@ -29,8 +30,7 @@ public class WithoutSpace{
             File file = new File("src/files/"+ fileName);
     	    Scanner sc = new Scanner(file);
         while(sc.hasNextLine()) {
-        	String text = sc.nextLine();
-            System.out.println(text);
+        	text = sc.nextLine();
         }
         sc.close();
 		}catch (FileNotFoundException e) {
@@ -60,8 +60,8 @@ public class WithoutSpace{
 			} catch (Exception e2) {}
 		}	
 	}
-	    public static void main(String ars[]) throws FileNotFoundException{
-            WithoutSpace spaceless = new WithoutSpace();
-            spaceless.readFile("TextWithSpace.txt");
-	    }
+    public void showSpaceless(){
+        text = text.replace(" ", "");
+        System.out.println(text);
+    }
 }

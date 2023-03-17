@@ -1,4 +1,6 @@
 package presenter;
+import java.io.FileNotFoundException;
+
 import model.*;
 import view.*;
 
@@ -10,40 +12,12 @@ public  class Presenter{
         view = new View();
         spaceless = new WithoutSpace();
     }
-   /* public void menu() {
-		int op=0;
-		do {
-			op = view.readMenu();
-			switch (op) {
-			case 1:
-			
-            break;
-			case 2:
-			
-            break;
-			case 3:
-            
-            break;
-			case 4:
-			
-            break;
-			case 5:
-            
-            break;
-			case 6:
-            
-            break;
-			case 7:
-			
-            break;
-			default:
-			view.showMessage("Opcion incorrecta");
-			}
-		}while (op != 7);
-	} */
+   public void showSpaceless(String fileName) throws FileNotFoundException{
+        spaceless.readFile(view.readString("Ïngrese el nombre del archivo"));
+   }
     
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
         Presenter presenter = new Presenter();
-        
+        presenter.showSpaceless(null);
     }
 }
