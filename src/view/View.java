@@ -22,6 +22,10 @@ public class View{
 		this.showMessage(message);
 		return input.nextShort();
 	}
+    public int readInt(String message){
+		this.showMessage(message);
+		return input.nextInt();
+	}
     public short readMenu(){
         String menuText = "1. Agregar carro"+"\n"+"2. Mostrar todos los carros"+"\n"+"3. Mostrar un carro especifico"+"\n"+"4. Salir";
         return readShort(menuText);

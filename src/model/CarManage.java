@@ -53,10 +53,11 @@ public class CarManage {
         return file.exists();
     }
 
-    public String createCar(String marca, String modelo, String año, String matricula, String color, String id)
-            throws IOException {
+    public String createCar(String marca, String modelo, String año, String matricula, String color, String id) throws IOException {
         String carInfo = marca + "," + modelo + "," + año + "," + matricula + "," + color + "," + id;
+        int newId = tempId+1;
         this.writeString(carInfo, "/src/sources/vehiculo_" + id + ".veh");
+        this.writeString(newId + "", "/src/sources/Vehicle_{sequence.ddr}");
         return "El carro ha sido creado correctamente";
     }
 
